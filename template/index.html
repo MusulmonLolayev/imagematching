@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<div style="margin: auto; width: auto;">
+    <form action="matching" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name='image' accept="image/*"/>
+        <input type="submit" value="Ok"/>
+    </form>
+</div>
+{% endblock content %}
